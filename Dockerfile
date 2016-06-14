@@ -20,14 +20,9 @@ RUN \
 # create deluge user
 # user will default to the 'nogroup' group
 RUN \
-  groupadd --system --gid 1001 media && \
+  groupadd --system --gid 1002 torrent && \
   adduser --system --uid 65000 --no-create-home deluge && \
-  usermod -aG media deluge
-
-RUN \
-  mkdir /deluge/logs && \
-  chmod -R 755 /deluge/logs && \
-  chown -R deluge:media /deluge/logs
+  usermod -aG torrent deluge
 
 # add custom files
 COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
