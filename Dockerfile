@@ -10,7 +10,8 @@ RUN \
   apt-get install -y software-properties-common && \
   add-apt-repository -y ppa:deluge-team/ppa && \
   apt-get update && \
-  apt-get install -y deluge supervisor unzip unrar && \
+  apt-get install -y deluged deluge-webui && \
+    supervisor unzip unrar && \
   apt-get clean && \
   rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
