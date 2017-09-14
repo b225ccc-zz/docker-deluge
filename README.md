@@ -1,13 +1,3 @@
 # docker-deluge
 
-
-Running:
-
-~~~ sh
-docker run \
-  --name deluge \
-  -v /etc/localtime:/etc/localtime:ro \
-  -v /data/services/deluge:/deluge \
-  -v /data/services/sickrage/downloads:/tv \
-  b225ccc/docker-deluge:latest
-~~~
+[![Build Status](https://travis-ci.org/b225ccc/docker-deluge.svg?branch=master)](https://travis-ci.org/b225ccc/docker-deluge
