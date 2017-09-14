@@ -1,0 +1,9 @@
+#!/usr/bin/with-contenv bash
+
+UMASK_SET=${UMASK_SET:-002}
+
+umask "$UMASK_SET"
+
+exec \
+	s6-setuidgid abc /usr/bin/deluge-web \
+	-c /deluge/config --loglevel=info
